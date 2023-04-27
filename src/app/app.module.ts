@@ -15,6 +15,7 @@ import { DessertsComponent } from './components/home-area/desserts/desserts.comp
 import { DessertItemComponent } from './components/home-area/dessert-item/dessert-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
+import { AddProductComponent } from './components/products-area/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProductCardComponent } from './components/products-area/product-card/pr
     DessertsComponent,
     DessertItemComponent,
     ProductCardComponent,
+    AddProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   exports: [],
