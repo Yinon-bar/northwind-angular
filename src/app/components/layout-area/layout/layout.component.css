@@ -13,11 +13,12 @@ footer {
 
 main {
   background: #ecf0f1;
-  grid-column: span 6;
+  grid-column: span 7;
   overflow: auto;
   padding: 20px;
 }
 
 aside {
+  grid-column: span 1;
   background: #7b8a8b;
 }
