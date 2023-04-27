@@ -1,0 +1,8 @@
+.items{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid;
+    padding: 15px;
+    justify-content: center;
+}

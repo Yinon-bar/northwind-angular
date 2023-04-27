@@ -1,0 +1,16 @@
+<div class="box">
+
+    <h2>Search</h2>
+
+    <label [title]="titleForString">Search</label>
+    <br>
+
+    <input [(ngModel)]="textForSerach" type="search">
+    <br>
+    
+    <button (click)="doSearch($event)" >Search</button>
+    
+    <br>
+    <span> You Searched for: {{textForSerach}} </span>
+
+</div>
