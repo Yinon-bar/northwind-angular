@@ -1,21 +1,26 @@
 <div>
-  <form>
+  <form (ngSubmit)="send()">
     <h3>Add a Product</h3>
     <label for="">
       <span>Name</span>
-      <input type="text" name="name" />
+      <input type="text" name="name" [(ngModel)]="product.name" />
     </label>
     <label>
       <span>Price</span>
-      <input type="number" name="price" />
+      <input type="number" name="price" [(ngModel)]="product.price" />
     </label>
     <label>
       <span>Stock:</span>
-      <input type="number" name="stock" />
+      <input type="number" name="stock" [(ngModel)]="product.stock" />
     </label>
     <label>
       <span>Image</span>
-      <input type="file" name="image" accept="image/*" />
+      <input
+        type="file"
+        name="image"
+        accept="image/*"
+        [(ngModel)]="product.imageName"
+      />
     </label>
     <button>Save</button>
   </form>

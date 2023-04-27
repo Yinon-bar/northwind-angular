@@ -14,6 +14,13 @@ export class ProductService {
     const products = await firstValueFrom(observable);
     return products;
   }
-  public addOneProduct() {}
+  public async addOneProduct(product: ProductModel): Promise<ProductModel> {
+    const observable = this.http.post<ProductModel>(
+      this.config.products,
+      product
+    );
+    const newProduct = await firstValueFrom(observable);
+    return newProduct;
+  }
   public deleteOneProduct() {}
 }

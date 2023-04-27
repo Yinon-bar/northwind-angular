@@ -7,7 +7,7 @@ import { FooterComponent } from './components/layout-area/footer/footer.componen
 import { MenuComponent } from './components/layout-area/menu/menu.component';
 import { HomeComponent } from './components/layout-area/home/home.component';
 import { SearchComponent } from './components/home-area/search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 import { ProductsListComponent } from './components/products-area/products-list/products-list.component';
 import { AboutComponent } from './components/about-area/about/about.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
