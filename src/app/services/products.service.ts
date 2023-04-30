@@ -15,9 +15,14 @@ export class ProductService {
     return products;
   }
   public async addOneProduct(product: ProductModel): Promise<ProductModel> {
+    const formData = new FormData();
+    formData.append('name', product.name);
+    formData.append('price', product.price.toString());
+    formData.append('stock', product.stock.toString());
+    formData.append('image', product.image);
     const observable = this.http.post<ProductModel>(
       this.config.products,
-      product
+      formData
     );
     const newProduct = await firstValueFrom(observable);
     return newProduct;
