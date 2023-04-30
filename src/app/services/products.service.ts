@@ -27,5 +27,8 @@ export class ProductService {
     const newProduct = await firstValueFrom(observable);
     return newProduct;
   }
-  public deleteOneProduct() {}
+  public async deleteOneProduct(id: number): Promise<void> {
+    const observable = this.http.delete(this.config.products + id);
+    await firstValueFrom(observable);
+  }
 }

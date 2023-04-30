@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductModel } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/products.service';
 
@@ -11,7 +12,10 @@ export class AddProductComponent {
   public product = new ProductModel();
   @ViewChild('productImage')
   public productImage: ElementRef<HTMLInputElement>;
-  public constructor(private productService: ProductService) {}
+  public constructor(
+    private productService: ProductService,
+    private router: Router
+  ) {}
 
   public async send() {
     try {
@@ -19,6 +23,7 @@ export class AddProductComponent {
       const newProduct = await this.productService.addOneProduct(this.product);
       console.log(this.product);
       alert('Product ' + newProduct.id + ' Was Added Successfuly');
+      this.router.navigateByUrl('/products');
       return;
     } catch (error: any) {
       console.log(error.message);
